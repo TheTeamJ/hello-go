@@ -3,9 +3,12 @@ package main
 import (
 	"encoding/json"
 	"io/ioutil"
+	"strings"
 )
 
-func saveLog(log []byte) {
+func saveLog(strArr []string) {
+	logStr := strings.Join(strArr, ",")
+	log := []byte(logStr)
 	log = append(log, '\n')
 	_ = ioutil.WriteFile("./log.txt", log, 0644)
 }

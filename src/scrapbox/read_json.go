@@ -7,7 +7,6 @@ import (
 	"io/ioutil"
 	"math/rand"
 	"strconv"
-	"strings"
 	"time"
 )
 
@@ -26,7 +25,7 @@ func main() {
 	log := []string{
 		title,
 		strconv.Itoa(lineNums)}
-	saveLog([]byte(strings.Join(log, ",")))
+	saveLog(log)
 }
 
 func getArgs() string {

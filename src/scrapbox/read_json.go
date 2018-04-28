@@ -14,7 +14,7 @@ import (
 func main() {
 	projectName := getArgs()
 
-	file, err := ioutil.ReadFile("./home/data/" + projectName + ".json")
+	file, err := ioutil.ReadFile("./data/" + projectName + ".json")
 	if err != nil {
 		return
 	}

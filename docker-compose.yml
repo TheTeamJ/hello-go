@@ -1,0 +1,7 @@
+version: '3'
+services:
+  work:
+    build: .
+    volumes:
+      - ./src:/go/src
+      - ./data:/go/data

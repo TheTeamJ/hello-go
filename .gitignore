@@ -5,8 +5,14 @@
 .AppleDouble
 .LSOverride
 
+data/*
+bin/*
+!bin/docker-bash
+log*.*
+
 # Icon must end with two \r
-Icon
+Icon
+
 
 # Thumbnails
 ._*

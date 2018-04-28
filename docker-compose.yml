@@ -4,4 +4,4 @@ services:
     build: .
     volumes:
       - ./src:/go/src
-      - ./home:/home
+      - ./data:/go/data

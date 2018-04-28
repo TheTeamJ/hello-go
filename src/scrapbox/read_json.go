@@ -7,7 +7,6 @@ import (
 	"io/ioutil"
 	"math/rand"
 	"strconv"
-	"strings"
 	"time"
 )
 
@@ -26,7 +25,7 @@ func main() {
 	log := []string{
 		title,
 		strconv.Itoa(lineNums)}
-	saveLog([]byte(strings.Join(log, ",")))
+	saveLog(log)
 }
 
 func getArgs() string {
@@ -59,14 +58,4 @@ func sampleTitle(project Project) string {
 	randTitle := project.Pages[idx].Lines[0].Text
 	fmt.Println(randTitle)
 	return randTitle
-}
-
-func saveLog(log []byte) {
-	log = append(log, '\n')
-	_ = ioutil.WriteFile("./log.txt", log, 0644)
-}
-
-func saveAsJson(project Project) {
-	outputJson, _ := json.Marshal(project)
-	_ = ioutil.WriteFile("./log.json", outputJson, 0644)
 }
